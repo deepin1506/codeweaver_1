@@ -1,0 +1,1 @@
+varTaxId:=GetAttributeValue["_DEFAULT","_DEFAULT","taxid"];varOldTaxId:=GetAttributeOldValue["_DEFAULT","_DEFAULT","taxid"];IIF[varTaxId<>varOldTaxId,SetAttributeValue["_DEFAULT","_DEFAULT","potentialownershipchangeflag",true] AND SetAttributeValue["_DEFAULT","_DEFAULT","potentialownershipchangereason","Tax ID changed to " + varTaxId],false]
