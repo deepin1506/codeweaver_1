@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LandingPage from "./components/landing";
-import CodePage from "./components/code";
-import GeneratePage from "./components/generate";
+import LandingPage from "./components/landing.js";
+import CodePage from "./components/code.js";
+import GeneratePage from "./components/generate.js";
 const router = createBrowserRouter([
   {
     path: "/",
