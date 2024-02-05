@@ -179,13 +179,11 @@ const GeneratePage = () => {
                   {chatMessages.map(({ message, isUser }) => (
                     <>
                       {isUser ? (
-                        <>
-                          <div className="usertalk-inner reply-inner">
-                            <div className="userleft-msg">
-                              <span>{message}</span>
-                            </div>
+                        <div className="usertalk-inner reply-inner">
+                          <div className="userleft-msg">
+                            <span>{message}</span>
                           </div>
-                        </>
+                        </div>
                       ) : (
                         <div className="usertalk-inner ">
                           <div className="userleft-msg">

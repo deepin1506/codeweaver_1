@@ -64,7 +64,7 @@ const LandingPage = () => {
                       <input
                         type="text"
                         name=""
-                        value=""
+                        // value=""
                         placeholder="Email id"
                         className="form-control"
                         required=""
@@ -78,7 +78,7 @@ const LandingPage = () => {
                       <input
                         type="text"
                         name=""
-                        value=""
+                        // value=""
                         placeholder="Password"
                         className="form-control"
                         required=""
