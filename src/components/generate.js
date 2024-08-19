@@ -3,6 +3,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import Logo from "../assets/img/logo.svg";
 import Profile from "../assets/img/profile.png";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const GeneratePage = () => {
   function removeClass() {
     const element = document.getElementById("sidebar");
@@ -39,7 +40,7 @@ const GeneratePage = () => {
       redirect: "follow",
     };
     setIsLoader(true);
-    await fetch("http://13.126.43.149/api/chat", requestOptions)
+    await fetch("http://13.126.43.149/back/api/chat", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         setUserInput("");
@@ -66,9 +67,9 @@ const GeneratePage = () => {
         <header>
           <div className="side-brand">
             {/* <!-- logo  --> */}
-            <a href="code" className="image">
+            <Link to="/code" className="image">
               <img src={Logo} className="logo" alt="logo" />
-            </a>
+            </Link>
             <button onClick={removeClass} className="ctoggle">
               <i className="ri-close-line "></i>
             </button>
@@ -80,39 +81,39 @@ const GeneratePage = () => {
             <ul className="menu-links">
               {/* <!-- Code lab --> */}
               <li className="nav-link ">
-                <a href="code">
+                <Link to="/code">
                   <span className="text nav-text">Code lab</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- Generate Code  --> */}
               <li className="nav-link active">
-                <a href="generate_code">
+                <Link to="/generate_code">
                   <span className="text nav-text">Generate Code </span>
-                </a>
+                </Link>
               </li>
               {/* <!-- bug detector --> */}
               <li className="nav-link">
-                <a href="#">
+                <Link to="#">
                   <span className="text nav-text">bug detector</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- refactor --> */}
               <li className="nav-link">
-                <a href="#">
+                <Link to="#">
                   <span className="text nav-text">refactor</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- explainer --> */}
               <li className="nav-link">
-                <a href="#">
+                <Link to="#">
                   <span className="text nav-text">explainer</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- logout --> */}
               <li className="nav-link">
-                <a href="/">
+                <Link to="/">
                   <span className="text nav-text">logout</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -149,14 +150,14 @@ const GeneratePage = () => {
                       aria-labelledby="dropdownMenuButton1"
                     >
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <Link className="dropdown-item" to="#">
                           Profile
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <Link className="dropdown-item" to="#">
                           Logout
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -176,8 +177,8 @@ const GeneratePage = () => {
               {/* <!-- chat-wrapper Start  --> */}
               <div className="chat-wrapper">
                 <div className="usertalk-wrapper">
-                  {chatMessages.map(({ message, isUser }) => (
-                    <>
+                  {chatMessages.map(({ message, isUser }, index) => (
+                    <div key={index}>
                       {isUser ? (
                         <div className="usertalk-inner reply-inner">
                           <div className="userleft-msg">
@@ -191,7 +192,7 @@ const GeneratePage = () => {
                           </div>
                         </div>
                       )}
-                    </>
+                    </div>
                   ))}
                   {isLoader && (
                     <div className="usertalk-inner ">
@@ -220,11 +221,11 @@ const GeneratePage = () => {
                         />
                       </div>
                       <div className="chatsend-btn order-md-2">
-                        <a type="submit">
+                        <Link type="submit">
                           <i>
                             <RiSendPlaneFill />
                           </i>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

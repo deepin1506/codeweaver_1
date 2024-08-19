@@ -1,6 +1,8 @@
+import React from "react";
 import { RiStarFill, RiCalendarLine, RiFileCopy2Line } from "react-icons/ri";
 import Logo from "../assets/img/logo.svg";
 import Profile from "../assets/img/profile.png";
+import { Link } from "react-router-dom";
 function removeClass() {
   const element = document.getElementById("sidebar");
   element.classList.remove("close");
@@ -13,9 +15,9 @@ const CodePage = () => {
         <header>
           <div className="side-brand">
             {/* <!-- logo  --> */}
-            <a href="code" className="image">
+            <Link to="/code" className="image">
               <img src={Logo} className="logo" alt="logo" />
-            </a>
+            </Link>
             <button onClick={removeClass} className="ctoggle">
               <i className="ri-close-line "></i>
             </button>
@@ -27,39 +29,39 @@ const CodePage = () => {
             <ul className="menu-links">
               {/* <!-- Code lab --> */}
               <li className="nav-link active">
-                <a href="code">
+                <Link to="/code">
                   <span className="text nav-text">Code lab</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- Generate Code  --> */}
               <li className="nav-link">
-                <a href="generate_code">
+                <Link to="/generate_code">
                   <span className="text nav-text">Generate Code </span>
-                </a>
+                </Link>
               </li>
               {/* <!-- bug detector --> */}
               <li className="nav-link">
-                <a href="#">
+                <Link to="#">
                   <span className="text nav-text">bug detector</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- refactor --> */}
               <li className="nav-link">
-                <a href="#">
+                <Link to="#">
                   <span className="text nav-text">refactor</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- explainer --> */}
               <li className="nav-link">
-                <a href="#">
+                <Link to="#">
                   <span className="text nav-text">explainer</span>
-                </a>
+                </Link>
               </li>
               {/* <!-- logout --> */}
               <li className="nav-link">
-                <a href="/">
+                <Link to="/">
                   <span className="text nav-text">logout</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -96,14 +98,14 @@ const CodePage = () => {
                       aria-labelledby="dropdownMenuButton1"
                     >
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <Link className="dropdown-item" to="#">
                           Profile
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <Link className="dropdown-item" to="#">
                           Logout
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -127,7 +129,7 @@ const CodePage = () => {
                 {/* <!-- loop start  --> */}
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -159,12 +161,12 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 {/* <!-- loop END  --> */}
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -196,7 +198,7 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -214,7 +216,7 @@ const CodePage = () => {
                 {/* <!-- loop start  --> */}
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -246,12 +248,12 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 {/* <!-- loop END  --> */}
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -283,11 +285,11 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -319,11 +321,11 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -355,11 +357,11 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -391,11 +393,11 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col">
                   {/* <!-- code-wrap --> */}
-                  <a href="generate_code" className="code-wrap">
+                  <Link to="/generate_code" className="code-wrap">
                     {/* <!-- code-head --> */}
                     <div className="code-head">
                       <div className="code-info">
@@ -427,7 +429,7 @@ const CodePage = () => {
                         </li>
                       </ul>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

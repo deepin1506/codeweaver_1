@@ -1,11 +1,24 @@
+import React from "react";
 import Logo from "../assets/img/logo.svg";
 import Banner from "../assets/img/banner.svg";
 import "../assets/css/shortcode.css";
 import "../assets/css/styles.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 // import "../assets/css/responsive.css";
 
 // import BannerShape1 from "../assets/img/icon/svg/shape01.svg";
 const LandingPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <>
       <div className="main-page landing-page">
@@ -14,9 +27,9 @@ const LandingPage = () => {
           <nav className="navbar navbar-expand-lg">
             <div className="container">
               <div className="nav-main">
-                {/* <a className="navbar-brand" href="#"> */}
+                {/* <Link className="navbar-brand" to="#"> */}
                 <img src={Logo} alt="logo" />
-                {/* </a> */}
+                {/* </Link> */}
               </div>
             </div>
           </nav>
@@ -64,7 +77,8 @@ const LandingPage = () => {
                       <input
                         type="text"
                         name=""
-                        // value=""
+                        value={email}
+                        onChange={handleEmail}
                         placeholder="Email id"
                         className="form-control"
                         required=""
@@ -78,7 +92,8 @@ const LandingPage = () => {
                       <input
                         type="text"
                         name=""
-                        // value=""
+                        value={password}
+                        onChange={handlePassword}
                         placeholder="Password"
                         className="form-control"
                         required=""
@@ -89,9 +104,9 @@ const LandingPage = () => {
                     </div>
                     <div className="">
                       {/* <!-- Button  --> */}
-                      <a href="code" className="btn btn-mcolor login-btn">
+                      <Link to="code" className="btn btn-mcolor login-btn">
                         Log in
-                      </a>
+                      </Link>
                     </div>
                   </form>
                 </div>
